@@ -1,2 +1,2 @@
-# ZayanVawdaST10448082-Android-assignment1
+# ZayanVawdaST10448082-assignment1
 class project
