@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                 if (matchedFigure != null) {
                     textView.text = " $age, ${matchedFigure.name} "
                 } else {
-                    textView.text = "No famous historical figure found who achieved at the age of $age."
+                    textView.text = "No famous historical figure found for age: $age"
                 }
 
                 // Add a dialog to display the matched figure's name for debugging
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
             HistoricalFigures("Napoleon Bonaparte", 51),
             HistoricalFigures("Tutankhamun", 18),
             HistoricalFigures("Mozart", 35),
-            HistoricalFigures("Bruce Lee", 32),
+            HistoricalFigures("Nelson Mandela", 95),
             HistoricalFigures("Vincent van Gogh", 37),
             HistoricalFigures("Anne Frank", 15)
         )
