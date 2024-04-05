@@ -1,10 +1,11 @@
+package com.example.myapplication
+
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.R
 
 class HistoricalFigures(val name: String, val age: Int)
 
@@ -24,14 +25,25 @@ class MainActivity : AppCompatActivity() {
                 val age = ageString.toInt()
                 val matchedFigure = findMatchedHistoricalFigure(age)
                 if (matchedFigure != null) {
-                    textView.text = "At age $age ${matchedFigure.name} achieved"
+                    textView.text = " $age, ${matchedFigure.name} "
                 } else {
-                    textView.text = "No famous historical figure found who died at this age."
+                    textView.text = "No famous historical figure found who achieved at the age of $age."
                 }
+
+                // Add a dialog to display the matched figure's name for debugging
+                val matchedFigureDialogMessage = matchedFigure?.let { "Matched Figure: ${it.name}" }
+                val alertDialogBuilder = AlertDialog.Builder(this)
+                alertDialogBuilder.setTitle("Matched Figure")
+                alertDialogBuilder.setMessage(matchedFigureDialogMessage ?: "No matched figure found.")
+                alertDialogBuilder.setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
+                val alertDialog = alertDialogBuilder.create()
+                /*alertDialog.show()*/
             } else {
-                textView.text = "Please enter your age."
+                textView.text = "Please enter an age."
             }
         }
+
+
 
         clearButton.setOnClickListener {
             textInput.text.clear()
@@ -51,6 +63,13 @@ class MainActivity : AppCompatActivity() {
             HistoricalFigures("Vincent van Gogh", 37),
             HistoricalFigures("Anne Frank", 15)
         )
-        return figures.find { it.age == age }
+
+        for (figure in figures) {
+            if (figure.age == age) {
+                return figure
+            }
+        }
+        return null
     }
+
 }

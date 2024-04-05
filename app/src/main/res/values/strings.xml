@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Zayan Vawda Age Checker Application</string>
     <string name="hint" />
     <string name="title_activity_colours">colours</string>
     <!-- Strings used for fragments for navigation -->
@@ -7,7 +7,11 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
+    <string name="image_4_description">Description of ImageView 4</string>
+    <string name="image_3_description">Description of ImageView 3</string>
+    <string name="enter_age_hint">Please Enter Age Here:</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="clear_button">Clear</string>
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus

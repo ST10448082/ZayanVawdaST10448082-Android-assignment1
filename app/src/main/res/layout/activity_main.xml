@@ -13,6 +13,7 @@
         android:layout_height="347dp"
         android:layout_marginTop="-25dp"
         android:layout_marginBottom="1dp"
+        android:contentDescription="Description of ImageView 4"
         app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
         app:layout_constraintDimensionRatio="h,16:9"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,10 +27,11 @@
         android:id="@+id/imageView3"
         android:layout_width="642dp"
         android:layout_height="271dp"
+        android:contentDescription="Description of ImageView 3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="h,16:9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView4"
         app:layout_constraintVertical_bias="1.0"
@@ -43,22 +45,23 @@
         android:hint="Please Enter Age Here:"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/ClickmeButton"
+        app:layout_constraintBottom_toTopOf="@+id/clickMeButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <Button
-        android:id="@+id/ClickmeButton"
+        android:id="@+id/clickMeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="202dp"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="42dp"
         android:text="Confirm"
+        android:contentDescription="Click to confirm"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ClickmeButton"
+        app:layout_constraintStart_toEndOf="@+id/clickMeButton"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
         tools:ignore="NotSibling" />
 
@@ -69,6 +72,7 @@
         android:layout_marginStart="190dp"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="-350dp"
+        android:contentDescription="Display text information"
         android:text="textview"
         android:textAlignment="center"
         android:textColor="#0B0303"
@@ -77,7 +81,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.984"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.402" />
 
     <TextView
         android:id="@+id/textView2"
@@ -91,6 +96,7 @@
         android:textAlignment="center"
         android:textColor="#0C0303"
         android:textSize="34sp"
+        android:contentDescription="Display history information"
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toStartOf="@+id/imageView4"
         app:layout_constraintHorizontal_bias="0.0"
@@ -107,9 +113,11 @@
         android:layout_marginEnd="-100dp"
         android:layout_marginBottom="40dp"
         android:text="Clear"
+        android:contentDescription="Click to clear"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toStartOf="@+id/textView"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
